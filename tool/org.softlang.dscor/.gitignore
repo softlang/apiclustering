@@ -1,0 +1,13 @@
+/.gradle/
+/gradle/
+/bin/
+/.cache-main
+/backup/
+/output/
+/build/
+/target/
+/.idea/
+/project/
+/config.properties
+/local-repo/
+/temp/
