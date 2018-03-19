@@ -1,0 +1,61 @@
+files,name,domains
+Ant 1.8.2.jar,Ant,Build
+ANTLR 3.1.11.jar,ANTLR,Parsing
+Apache XML resolver 1.2.jar;Apache XML security 1.3.0.jar;Apache XML serializer 2.7.1.jar,ApacheXML,XML
+Apache XML-RPC client 3.1.3.jar;Apache XML-RPC common 3.1.3.jar;Apache XML-RPC server 3.1.3.jar,ApacheXML-RPC,Distribution
+ASM 3.2.jar,ASM,Meta
+Avalon 4.1.5.jar,Avalon,Data;Component;Control
+Avalon LogKit 2.1.jar,AvalonLogKit,Logging
+BCEL 5.2.jar,BCEL,Meta
+Bouncy Castle mail jdk15-1.46.jar;Bouncy Castle prov jdk15-1.46.jar;Bouncy Castle tsp jdk15-1.46.jar,BouncyCastle,Encriyption
+BSF 2.4.0.jar,BSF,Javaassist;Meta
+com.apple.eawt unknownvers.jar,com.apple.eawt,Basics
+CUP unknownvers.jar,CUP,Parsing
+dom4j 1.7.jar,dom4j,XML
+ECS unknownvers.jar,ECS,XML
+EJB 3.0-edr2.jar,EJB,Component
+Guava 1.01.jar,Guava,Basics;Data
+Guice 1.04.jar,Guice,Control
+Hamcrest 1.1.jar,Hamcrest,Testing
+Hibernate 3.3.1.GA.jar,Hibernate,SQL
+iText 2.1.7.jar,iText,Format
+JAF 1.1.1.jar,JAF,Component;Format
+JAMA 1.0.2.jar,JAMA,Math
+JavaMail 1.4.jar,JavaMail,Productivity
+javax.annotation 305.jar,javax.annotation,Meta
+javax.jnlp unknownvers.jar,javax.jnlp,Web
+javax.net 1.0.3.jar,javax.net,Distribution
+javax.servlet 2.5.jar,javax.servlet,Web
+Jaxen 1.1.jar,Jaxen,XML
+JDOM 1.1.jar,JDOM,XML
+JDT 3.2.3.v_686_R32x.jar,JDT,Meta
+Jetty 6.1.16.jar,Jetty,Web
+JFreeChart 1.0.2.jar,JFreeChart,Productivity
+JGoodies forms 1.2.1.jar;JGoodies looks 2.2.2.jar,JGoodies,GUI
+JGraph 1.4.2_17-b06.jar,JGraph,Productivity
+JGroups 2.6.10.GA.jar,JGroups,Middleware;Distribution
+JMF unknownvers.jar,JMF,Format
+JNDI 1.2.1.jar,JNDI,Distribution
+JPA 3.0.jar,JPA,SQL
+JTA 1.1.jar,JTA,Control
+JUnit 4.8.1.jar,JUnit,Testing
+Jython 2.1.jar,Jython,Meta
+log4j 1.2.15.jar,log4j,Logging
+Lucene 2.9.3.jar,Lucene,Search
+Maven artifact 2.0.9.jar;Maven artifact-resolver 1.0.jar;Maven model 3.0.2.jar;Maven plugin-api 2.0.9.jar;Maven settings 2.0.9.jar,Maven,Build
+OGNL 2.7.2.jar,OGNL,Meta
+org.htmlparser unknownvers.jar,org.htmlparser,Parsing
+org.syntax.jedit 2.2.2.jar,org.syntax.jedit,GUI
+ORO 2.0.8.jar,ORO,Format
+OSCache 2.3.2.jar,OSCache,Caching
+Plexus XML 2.0.5.jar,PlexusXML,XML
+POI 3.5.jar,POI,Productivity
+Rhino 1.7R1.jar,Rhino,Meta
+sax (2r2).jar,SAX,XML
+SLF4J 1.5.10.jar,SLF4J,Logging
+Smack 2.2.1.jar,Smack,Middleware
+Spring 2.5.6.jar,Spring,NoSQL;Security;Middleware;SQL;Component;Control;Distribution
+Struts 1.3.10.jar,Struts,Web
+Tidy r938.jar,Tidy,XML
+Velocity 1.6.4.jar,Velocity,Output
+XStream 1.3.1.jar,XStream,XML
