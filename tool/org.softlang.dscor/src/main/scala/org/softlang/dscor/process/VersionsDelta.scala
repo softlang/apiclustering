@@ -3,6 +3,7 @@ package org.softlang.dscor.process
 import java.io.File
 
 import com.google.common.base.Charsets
+import org.softlang.dscor.Paths
 import org.softlang.dscor.utils._
 
 import scala.collection.JavaConverters._
@@ -10,19 +11,7 @@ import scala.collection.JavaConverters._
 /**
   * Created by Johannes on 15.01.2018.
   */
-object CreateRecursiveRating2 {
-
-  // Some recursive segmentation rating.
-  // Outlier extraction over triangle comparison. Depth two a-b-c compared to a-c
-
-  // Start with segment.
-
-  // Compute average usage.
-  // Set based delta between the intersection of the two ranges.
-
-  // If every version is too equal, rate low.
-  // Find highest changes is segment, split and call recursive.
-
+object VersionsDelta {
 
   def unqualify(x: String): String = if (x.lastIndexOf(".") == -1) x else x.substring(x.lastIndexOf(".") + 1)
 
@@ -78,12 +67,6 @@ object CreateRecursiveRating2 {
 
         val elements = (0 to metadata.size - 1).map(x => (x,unqualify(SMavens.jarElements(groupId + ":" + artifactId + ":" + metadata(x)("version")))))
 
-        // Filter elements base on triangle.
-//        val filtered = elements.zip(Seq(Set[String]()) ++ elements).zip(elements.drop(1)).filter { case (((mid), left), right) =>
-//          jc(left, right) * 3 > (jc(mid, left) + jc(mid, right)) / 2.0
-//        }.map { case (((mid), left), right) => mid }.zipWithIndex.map(_.swap)
-
-
         val linkage = buhc(elements.map { case (i, e) => (i, 1, e) })
 
         elements.zip(Seq(Set[String]()) ++ elements.map(_._2)).map { case ((version, current), previous) =>
@@ -102,7 +85,7 @@ object CreateRecursiveRating2 {
     }
 
 
-    val sinkDelta = JUtils.asCSVSink(new File(Paths.apiDelta), Charsets.UTF_8, CSVSink.SinkType.FIRST_LINE)
+    val sinkDelta = JUtils.asCSVSink(new File(Paths.versionDelta), Charsets.UTF_8, CSVSink.SinkType.FIRST_LINE)
 
     for (row <- deltas.collect()) {
       println(row)

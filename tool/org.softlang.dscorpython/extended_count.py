@@ -1,7 +1,6 @@
 import pandas as pd
-import numpy as np
-import math
 import matplotlib.pyplot as plt
+import paths
 
 if __name__ == '__main__':
     pd.set_option('display.max_columns', 100)
@@ -9,11 +8,8 @@ if __name__ == '__main__':
     plt.rcParams["font.family"] = "consolas"
     plt.rcParams["font.size"] = 14
 
-    counts_file = 'C:/Data/Corpus/APIBaseline/Counts.csv'
-    extended_count = 'C:/Data/Corpus/APIBaseline/ExtendedCount.csv'
-
     # Read counts
-    counts = pd.read_csv(counts_file, encoding='ISO-8859-1')
+    counts = pd.read_csv(paths.counts, encoding='ISO-8859-1')
     # Filter counts
     counts = counts[counts.apply(
         lambda x: isinstance(x['groupId'], str) and isinstance(x['artifactId'], str) and isinstance(x['version'], str),
@@ -34,22 +30,4 @@ if __name__ == '__main__':
         columns={'count_x': 'version_usage', 'count_y': 'api_usage'})
     result = result.sort_values(by=['api_usage', 'version_usage'], ascending=False)
 
-    print(result)
-    result.to_csv(extended_count)
-
-
-    # counts_file = 'C:/Data/Corpus/APIBaseline/Counts.csv'
-    # frequentapi_file = 'C:/Data/Corpus/APIBaseline/FrequentApi.csv'
-    #
-    # # Read counts
-    # counts = pd.read_csv(counts_file, encoding='ISO-8859-1')
-    #
-    # # Dropping column version.
-    # counts.drop(['version'], axis=1, inplace=True)
-    #
-    # # Aggregating counts
-    # frequentapi = counts.groupby(['groupId', 'artifactId']).sum()
-    # frequentapi = frequentapi.sort_values(by='count', ascending=False)
-    #
-    # print(frequentapi)
-    # frequentapi.to_csv(frequentapi_file)
+    result.to_csv(paths.extended_counts)

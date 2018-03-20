@@ -8,7 +8,8 @@ import org.apache.hadoop.hdfs.server.datanode.DataStorage
 import org.apache.maven.model.Model
 import org.apache.spark.sql.SQLContext
 import org.apache.spark.storage.StorageLevel
-import org.softlang.dscor.utils.{CSVSink, JUtils, Mavens, Utils}
+import org.softlang.dscor.Paths
+import org.softlang.dscor.utils._
 
 import collection.JavaConverters._
 
@@ -16,7 +17,7 @@ import collection.JavaConverters._
 /**
   * Created by Johannes on 15.12.2017.
   */
-object ParseGitPomsProgramToRepos {
+object Clients {
   def blacklist = Set("https://raw.githubusercontent.com/NKaladhar/helloworldmaven/1de7b79af9a1168cd42c459b9130528c69512b1e/pom.xml",
     "https://raw.githubusercontent.com/masthan01/helloworldmaven/396b73493a324b5e5df79e519bf0f231673ec48c/pom.xml")
 
@@ -61,7 +62,7 @@ object ParseGitPomsProgramToRepos {
     val dependencyAccumulator = Utils.sc.longAccumulator("Dependencies")
     // import sqlContext.implicits._
 
-    val sources = Utils.sc.textFile(JUtils.configuration("api_baseline") + "/PomSourceList.csv")
+    val sources = Utils.sc.textFile(Paths.poms)
     val header = sources.first()
     val applicationPoms = sources
       .filter { case line => line != header }
@@ -93,35 +94,5 @@ object ParseGitPomsProgramToRepos {
       csvsink.write(row.toArray: _*)
 
     csvsink.close()
-
-    // Count directly and persist as count file.
-
-    //
-    //    for (x <- applicationPoms.take(200) ) {
-    //      println("parsing " + x.pomUrl)
-    //      if (x.pomUrl.endsWith("pom.xml")) {
-    //        try {
-    //          println(parse(x.pomUrl))
-    //        } catch {
-    //          case e => println(e)
-    //        }
-    //      }
-    //    }
-
-    //println(textRDD.foreach(println)
-    //    val empRdd = textRDD.map {
-    //      line =>
-    //        val col = line.split(",")
-    //        Employee(col(0), col(1), col(2), col(3), col(4), col(5), col(6))
-    //    }
-    //    val empDF = empRdd.toDF()
-    //    empDF.show()
-    /* Spark 2.0 or up
-      val empDF= sqlContext.read.format("csv")
-  .option("header", "true")
-  .option("inferSchema", "true")
-  .load("src\\main\\resources\\emp_data.csv")
-     */
   }
-
 }

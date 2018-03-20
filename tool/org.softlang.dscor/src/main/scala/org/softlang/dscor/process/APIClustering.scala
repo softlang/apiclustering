@@ -6,10 +6,11 @@ import com.google.common.base
 import com.google.common.base.{Charsets, Strings}
 import org.apache.commons.lang.StringEscapeUtils
 import org.apache.spark.rdd.RDD
+import org.softlang.dscor.Paths
 import org.softlang.dscor.featuremodel.{APIClustering, FeatureModel, RoverLP13}
 import org.softlang.dscor.utils.{SQLites, Utils, ViewUtils}
 import org.softlang.dscor.utils.JUtils
-import org.softlang.dscor.utils.{CSVSink}
+import org.softlang.dscor.utils.CSVSink
 
 import collection.JavaConverters._
 import scala.math.Ordering
@@ -18,14 +19,12 @@ import scala.reflect.ClassTag
 /**
   * Created by Johannes on 18.10.2017.
   */
-object APIClustringPaper3 {
-
-  def resultsFile = JUtils.configuration("dataset") + "/Results.csv"
+object APIClustering {
 
   def main(args: Array[String]): Unit = {
     val length = FeatureModel.length[APIClustering].toInt
 
-    val results = JUtils.asCSVSink(new File(resultsFile), Charsets.UTF_8, CSVSink.SinkType.DYNAMIC)
+    val results = JUtils.asCSVSink(new File(Paths.results), Charsets.UTF_8, CSVSink.SinkType.DYNAMIC)
 
     for (i <- new scala.util.Random(1234567l).shuffle(0 to length)) {
       // Enumeration of the feature model.

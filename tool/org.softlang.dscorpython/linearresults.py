@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from scipy.cluster.hierarchy import dendrogram
-import utils as ut
 
 if __name__ == '__main__':
     pd.set_option('display.max_columns', 80)

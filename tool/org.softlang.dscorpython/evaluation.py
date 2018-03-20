@@ -1,13 +1,10 @@
 import pandas as pd
-import numpy as np
 import math
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 import paths
-
 from scipy.cluster.hierarchy import dendrogram
-import utils as ut
 
 if __name__ == '__main__':
     pd.set_option('display.max_columns', 80)
@@ -16,31 +13,34 @@ if __name__ == '__main__':
     plt.rcParams["font.size"] = 14
     plt.rcParams['figure.figsize'] = 8, 8
 
-    results_file = 'C:/Data/Corpus/APIBaseline/Results.csv'
-    linear_results_file = 'C:/Data/Corpus/APIBaseline/LinearResults.csv'
-    final_file = 'C:/Data/Corpus/APIBaseline/HaertelAL18.csv'
-    figure_folder = 'C:/Data/Corpus/APIBaseline/figures3'
-    top_feature_file = 'C:/Data/Corpus/APIBaseline/TopFeatures.csv'
     # Clean figure output folder.
-    for root, dirs, files in os.walk(figure_folder):
+    for root, dirs, files in os.walk(paths.evaluation_folder):
         for f in files:
             os.unlink(os.path.join(root, f))
 
 
+    def read_linkage(text):
+        link = []
+        if not (text == '' or text == 'nan'):
+            for x in text.split(' '):
+                left_index = int(x.split(';')[0])
+                right_index = int(x.split(';')[1])
+                similarity = float(x.split(';')[2])
+                size = int(x.split(';')[3])
+                link.append([left_index, right_index, similarity, size])
+        return link
+
+
     def save_figure(fig, name):
-        fig.savefig(figure_folder + "/" + name + ".png", dpi=100)
+        fig.savefig(paths.evaluation_folder + "/" + name + ".png", dpi=100)
 
 
-    # Read metadata
-    final = pd.read_csv(final_file, encoding='ISO-8859-1')
-
-
-    # Read linear results
-    raw = pd.read_csv(linear_results_file, encoding='ISO-8859-1')
+    # Read data
+    final = pd.read_csv(paths.haertelAL18, encoding='ISO-8859-1')
+    raw = pd.read_csv(paths.flat_results, encoding='ISO-8859-1')
     raw = raw.dropna()
+    configurations = pd.read_csv(paths.results, encoding='ISO-8859-1')
 
-    # Read configuration results.
-    configurations = pd.read_csv(results_file, encoding='ISO-8859-1')
     # API affiliation
     configurations['api_max_correlation'] = configurations[
         [x for x in configurations.columns if str(x).startswith("#corr_" + "api")]].apply(
@@ -102,8 +102,8 @@ if __name__ == '__main__':
         ax3.yaxis.label.set_visible(False)
         ax1.yaxis.label.set_visible(False)
 
-        ci=100
-        marker='o'
+        ci = 100
+        marker = 'o'
         sns.tsplot(data=raw[(raw.sampling != 'API') & (raw['property'] == 'domains')], legend=True, ax=ax0,
                    time='step',
                    ci=ci,
@@ -119,7 +119,7 @@ if __name__ == '__main__':
                    value='correlation', )
 
         sns.tsplot(data=raw[(raw.sampling != 'API') & (raw['property'] == 'category')], ax=ax2, legend=False,
-                   time='step',  color=palette,
+                   time='step', color=palette,
                    ci=ci,
                    unit='configuration_index', condition=feature,
                    value='correlation', )
@@ -153,7 +153,7 @@ if __name__ == '__main__':
     for index, row in top_feature.iterrows():
         plt.close('all')
         fig, ((ax0)) = plt.subplots(nrows=1, ncols=1, figsize=(15, 100))
-        linkage = [[x[0], x[1], max(0.0, x[2]), x[3]] for x in reversed(ut.read_linkage(str(row['linkage'])))]
+        linkage = [[x[0], x[1], max(0.0, x[2]), x[3]] for x in reversed(read_linkage(str(row['linkage'])))]
 
         apis = pd.merge(pd.DataFrame({'coordinates': row['apis'].split(";")}), final, how='left', on=['coordinates'])
 
@@ -184,7 +184,7 @@ if __name__ == '__main__':
     top_feature['api_max_correlation'] = top_feature['api_max_correlation'].apply(
         lambda x: math.ceil(x * 1000) / 1000)
 
-    top_feature.to_csv(top_feature_file, index=False)
+    top_feature.to_csv(paths.top, index=False)
 
     # Create boxplot.
     for feature in features:
@@ -231,10 +231,14 @@ if __name__ == '__main__':
 
                 fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2, sharey=True)
 
-                sns.boxplot(ax=ax0, x=feature_a, hue=feature_b, y="domains_max_correlation", data=configurations, palette=palette)
-                sns.boxplot(ax=ax1, x=feature_a, hue=feature_b, y="tags_max_correlation",  data=configurations, palette=palette)
-                sns.boxplot(ax=ax2, x=feature_a, hue=feature_b, y="category_max_correlation", data=configurations, palette=palette)
-                sns.boxplot(ax=ax3, x=feature_a, hue=feature_b, y="api_max_correlation", data=configurations, palette=palette)
+                sns.boxplot(ax=ax0, x=feature_a, hue=feature_b, y="domains_max_correlation", data=configurations,
+                            palette=palette)
+                sns.boxplot(ax=ax1, x=feature_a, hue=feature_b, y="tags_max_correlation", data=configurations,
+                            palette=palette)
+                sns.boxplot(ax=ax2, x=feature_a, hue=feature_b, y="category_max_correlation", data=configurations,
+                            palette=palette)
+                sns.boxplot(ax=ax3, x=feature_a, hue=feature_b, y="api_max_correlation", data=configurations,
+                            palette=palette)
 
                 ax0.set_title('Domains')
                 ax1.set_title('Tags')
@@ -254,35 +258,3 @@ if __name__ == '__main__':
                 ax1.yaxis.label.set_visible(False)
 
                 save_figure(fig, "cbox_" + feature_a + "_" + feature_b)
-
-
-
-        # Creating correlation trends
-
-
-        # sns.boxplot(x="granularity", y="correlation", data= data, hue='analytical', palette="PRGn")
-        # sns.despine(offset=10, trim=True)
-
-
-        # focus_property = [x for x in results.columns if str(x).startswith("#corr_" + "tags")]
-        # focus_property.sort()
-        # regular_property = [x for x in results.columns if not str(x).startswith("#")]
-        #
-        # focus = results[regular_property]
-        # focus['max'] = results[focus_property].apply(lambda x: x.max(), axis=1)
-        # focus['mean'] = results[focus_property].apply(lambda x: x.mean(skipna=True), axis=1)
-        #
-        # focus['combined'] = focus.apply(lambda x: x['max'] + x['mean'], axis=1)
-        # #sample0 = focus[focus.analytical == 'AnalyticalIdf'][['granularity', 'combined']]  # .boxplot(by=['granularity'])
-        #
-
-        #
-        # sample1 = results[focus_property].head(10).transpose()
-        # sample1['merge'] = range(0, len(sample1))
-        # print(sample1)
-        # sample1.plot(kind="line", x="merge", legend=False)
-        #
-        # gammas = sns.load_dataset("gammas")
-        # print(gammas)
-        # # Plot the response with standard error
-        #

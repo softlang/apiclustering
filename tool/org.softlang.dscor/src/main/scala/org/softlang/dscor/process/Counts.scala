@@ -7,16 +7,15 @@ import com.google.common.base.Charsets
 import org.apache.maven.model.Model
 import org.apache.spark.sql.SQLContext
 import org.apache.spark.{SparkConf, SparkContext}
-import org.softlang.dscor.utils.{CSVSink, JUtils, Mavens, Utils}
+import org.softlang.dscor.Paths
+import org.softlang.dscor.utils._
 
 import collection.JavaConverters._
-
-case class ApplicationPom(pomUrl: String, applicationUrl: String)
 
 /**
   * Created by Johannes on 15.12.2017.
   */
-object ParseGitPomsProgram {
+object Counts {
   def blacklist = Set("https://raw.githubusercontent.com/NKaladhar/helloworldmaven/1de7b79af9a1168cd42c459b9130528c69512b1e/pom.xml",
     "https://raw.githubusercontent.com/masthan01/helloworldmaven/396b73493a324b5e5df79e519bf0f231673ec48c/pom.xml")
 
@@ -60,7 +59,7 @@ object ParseGitPomsProgram {
     val sqlContext = new SQLContext(Utils.sc)
     val dependencyAccumulator = Utils.sc.longAccumulator("Dependencies")
 
-    val sources = Utils.sc.textFile(JUtils.configuration("dataset") + "/PomSourceList.csv")
+    val sources = Utils.sc.textFile(Paths.poms)
     val header = sources.first()
     val applicationPoms = sources
       .filter { case line => line != header }

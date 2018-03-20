@@ -6,10 +6,9 @@ import java.util.zip.ZipFile
 import org.apache.commons.io.IOUtils
 import org.apache.commons.lang.StringEscapeUtils
 import org.apache.spark.rdd.RDD
-import org.softlang.dscor.{Property, RDDModule}
+import org.softlang.dscor.{Paths, Property, RDDModule}
 import org.softlang.dscor.modules.access.{Access, ByteInputStreamDelegate}
 import org.softlang.dscor.modules.{Blanks, Documents}
-import org.softlang.dscor.process.Paths
 import org.softlang.dscor.utils._
 
 import collection.JavaConverters._

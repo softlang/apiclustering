@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import math
+import paths
 import matplotlib.pyplot as plt
 import os
 import glob
@@ -16,14 +17,14 @@ if __name__ == '__main__':
     plt.rcParams['figure.figsize'] = 16, 6
 
     # TODO: Extract paths.
-    api_evolution_file = 'C:/Data/Corpus/APIBaseline/Delta2.csv'
-    figure_folder = 'C:/Data/Corpus/APIBaseline/figures2'
-    final_file = 'C:/Data/Corpus/APIBaseline/HaertelAL18.csv'
-    first_final_file = 'C:/Data/Corpus/APIBaseline/FirstFinal.csv'
+    # api_evolution_file = 'C:/Data/Corpus/APIBaseline/Delta2.csv'
+    # figure_folder = 'C:/Data/Corpus/APIBaseline/figures2'
+    # final_file = 'C:/Data/Corpus/APIBaseline/HaertelAL18.csv'
+    # first_final_file = 'C:/Data/Corpus/APIBaseline/FirstFinal.csv'
 
 
     def save_figure(fig, name):
-        fig.savefig(figure_folder + "/" + name + ".png")
+        fig.savefig(paths.evolution_folder + "/" + name + ".png")
 
 
     def read_linkage(text):
@@ -39,11 +40,11 @@ if __name__ == '__main__':
 
 
     # Clean figure output folder.
-    for root, dirs, files in os.walk(figure_folder):
+    for root, dirs, files in os.walk(paths.evolution_folder):
         for f in files:
             os.unlink(os.path.join(root, f))
 
-    data = pd.read_csv(api_evolution_file)
+    data = pd.read_csv(paths.version_delta)
     data['api'] = data.apply(lambda x: x['groupId'] + '-' + x['artifactId'], axis=1)
     data['coordinates'] = data.apply(lambda x: x['groupId'] + ':' + x['artifactId'] + ':' + x['version'], axis=1)
 
@@ -102,20 +103,8 @@ if __name__ == '__main__':
     data = data.sort_values(by='rating', ascending=True)
     data['rank'] = range(0, len(data))
 
-
     # Save csv as final data.
-    data.to_csv(final_file, index= False)
-
-    print(data)
-
-
-    data['groupId_artifactId_and_version'] = data.apply(lambda x: x.groupId + ":" + x.artifactId + ":" + x.version, axis=1)
-
-    reduced = data[['groupId_artifactId_and_version','size', 'api_usage', 'api_usage_rank', 'version_usage', 'version_usage_rank', 'category', 'tags',
-         'source_available', 'number_api_clusters']].head(15)
-    reduced['tags'] = reduced.apply(lambda x: x['tags'].replace(';', ' '), axis=1)
-    reduced.to_csv(first_final_file, index=False)
-
+    data.to_csv(paths.haertelAL18, index= False)
 
     # Plot the data and add plotting specific columns that are not saved.
     for (id, api) in data.groupby(['api']):
