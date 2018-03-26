@@ -156,7 +156,7 @@ public class JUtils {
         return result;
     }
 
-    public static Long countFiles(File file) {
-        return Files.fileTreeTraverser().postOrderTraversal(file).stream().count();
-    }
+//    public static Long countFiles(File file) {
+//        return Files.fileTreeTraverser().postOrderTraversal(file).stream().count();
+//    }
 }

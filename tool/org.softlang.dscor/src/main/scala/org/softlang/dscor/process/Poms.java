@@ -22,11 +22,11 @@ public class Poms {
 
 	public static final int GIT_INDEXED_MAX_SIZE = 384000;
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		queryPoms();
 	}
 
-	public static void queryPoms() throws IOException {
+	public static void queryPoms() throws Exception {
 		String query = "https://api.github.com/search/code?q=filename:pom.xml+extension:xml";
 
 		int totalCount = collect(query).getAsJsonObject().get("total_count").getAsInt();
@@ -39,7 +39,7 @@ public class Poms {
 		printer.close();
 	}
 
-	public static void collectAll(CSVPrinter printer, String service, int low, int high) throws IOException {
+	public static void collectAll(CSVPrinter printer, String service, int low, int high) throws Exception {
 		for (int page = 1; page <= 10; page++) {
 			String query = service + "+size:" + String.valueOf(low) + ".." + String.valueOf(high) + "&page="
 					+ String.valueOf(page) + "&per_page=100";

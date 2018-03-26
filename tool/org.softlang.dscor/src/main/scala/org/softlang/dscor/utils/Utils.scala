@@ -21,9 +21,7 @@ import com.google.common.base.Charsets
 import collection.JavaConverters._
 import breeze.linalg.{DenseVector => DenseBreezeVector, SparseVector => SparseBreezeVector, Vector => BreezeVector}
 import org.apache.commons.io.IOUtils
-import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.spark.broadcast.Broadcast
-import org.apache.pdfbox.text.PDFTextStripper
 import org.apache.spark.mllib.linalg.{DenseVector => DenseSparkVector}
 import org.apache.spark.mllib.linalg.{SparseVector => SparseSparkVector}
 import org.apache.spark.mllib.linalg.{Vector => SparkVector}
@@ -84,12 +82,6 @@ object Utils {
     Logger.getLogger("org.apache").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
     spark
-  }
-
-  def readPDF(inputStream: InputStream): String = {
-    val pdf = PDDocument.load(inputStream)
-    val stripper = new PDFTextStripper
-    stripper.getText(pdf)
   }
 
   def read(path: String): String = read(new File(path))

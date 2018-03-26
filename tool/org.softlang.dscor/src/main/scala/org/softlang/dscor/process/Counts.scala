@@ -64,7 +64,7 @@ object Counts {
     val applicationPoms = sources
       .filter { case line => line != header }
       .map(_.split(","))
-      .map { case line => ApplicationPom(line(0), line(1)) }
+      .map { case line => ApplicationPom(line(5), line(4)) }
       .filter(x => !blacklist.contains(x.pomUrl))
 
 
