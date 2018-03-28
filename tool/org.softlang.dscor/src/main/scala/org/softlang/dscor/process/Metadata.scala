@@ -30,7 +30,7 @@ object Metadata {
 
     def source = Utils.sc.parallelize(SUtils.readCsv(new File(Paths.extendedCounts)), 20)
 
-    def threshold_usage_rank_api = 100
+    def threshold_usage_rank_api = 200
 
     val metadata = source
       .map { case row => row.filter(_._1 != "") }

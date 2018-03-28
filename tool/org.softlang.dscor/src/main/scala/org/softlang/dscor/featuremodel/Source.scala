@@ -23,18 +23,17 @@ sealed trait Source {
 
 }
 
-case class RoverLP13() extends Source {
-
-  def apis() = SUtils.readCsv(new File(Paths.roverLP14)).map(x => x("name") -> x).toMap
-
-  override def compute(): RDDModule[(String, InputStreamDelegate)] = new RoverLP13Module(apis())
-
-}
+//case class RoverLP13() extends Source {
+//
+//  def apis() = SUtils.readCsv(new File(Paths.roverLP14)).map(x => x("name") -> x).toMap
+//
+//  override def compute(): RDDModule[(String, InputStreamDelegate)] = new RoverLP13Module(apis())
+//
+//}
 
 case class HaertelAL18() extends Source {
 
-  // TODO: Remove cut.
-  def cut = 300
+  def cut = 600
 
   def apis() = SUtils.readCsv(new File(Paths.haertelAL18)).take(cut).map(x => x("coordinates") -> x).toMap
 

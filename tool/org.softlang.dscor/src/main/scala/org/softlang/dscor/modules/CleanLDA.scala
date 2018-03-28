@@ -37,8 +37,8 @@ class CleanLDA[T](
 
   @Value
   def model(): LocalLDAModel = {
-    if (optimizer == "em") new org.apache.spark.mllib.clustering.LDA().setOptimizer(optimizer).setK(k).setBeta(beta + 1.0d).setAlpha(alpha + 1.0d).setMaxIterations(iterations).run(input()).asInstanceOf[DistributedLDAModel].toLocal
-    else if (optimizer == "online") new org.apache.spark.mllib.clustering.LDA().setOptimizer(optimizer).setK(k).setBeta(beta).setAlpha(alpha).setMaxIterations(iterations).run(input()).asInstanceOf[LocalLDAModel]
+    if (optimizer == "em") new org.apache.spark.mllib.clustering.LDA().setSeed(123456l).setOptimizer(optimizer).setK(k).setBeta(beta + 1.0d).setAlpha(alpha + 1.0d).setMaxIterations(iterations).run(input()).asInstanceOf[DistributedLDAModel].toLocal
+    else if (optimizer == "online") new org.apache.spark.mllib.clustering.LDA().setSeed(123456l).setOptimizer(optimizer).setK(k).setBeta(beta).setAlpha(alpha).setMaxIterations(iterations).run(input()).asInstanceOf[LocalLDAModel]
     else throw new RuntimeException("optimizer not found")
   }
 

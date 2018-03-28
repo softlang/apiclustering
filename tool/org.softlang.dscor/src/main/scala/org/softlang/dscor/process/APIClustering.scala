@@ -7,7 +7,7 @@ import com.google.common.base.{Charsets, Strings}
 import org.apache.commons.lang.StringEscapeUtils
 import org.apache.spark.rdd.RDD
 import org.softlang.dscor.Paths
-import org.softlang.dscor.featuremodel.{APIClustering, FeatureModel, RoverLP13}
+import org.softlang.dscor.featuremodel.{APIClustering, FeatureModel}
 import org.softlang.dscor.utils.{SQLites, Utils, ViewUtils}
 import org.softlang.dscor.utils.JUtils
 import org.softlang.dscor.utils.CSVSink
@@ -58,8 +58,10 @@ object APIClustering {
           apis.flatMap(left => apis.map(right => (step, left, right, clustering.exists(c => c.contains(left) && c.contains(right)))))
         }
 
-      val correlationProperties = (if (target.source.isInstanceOf[RoverLP13]) Set("domains")
-      else Set("category", "tags", "api"))
+//      val correlationProperties = (if (target.source.isInstanceOf[RoverLP13]) Set("domains")
+//      else Set("category", "tags", "api"))
+
+      val correlationProperties = Set("category", "tags", "api")
 
       val properties = structure.flatMap { case (step, left, right, expected) =>
         correlationProperties.map(x => (x, step, left, right, expected, reference(left, right, x)))

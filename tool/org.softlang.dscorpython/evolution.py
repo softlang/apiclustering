@@ -16,12 +16,8 @@ if __name__ == '__main__':
     plt.rcParams["font.size"] = 14
     plt.rcParams['figure.figsize'] = 16, 6
 
-    # TODO: Extract paths.
-    # api_evolution_file = 'C:/Data/Corpus/APIBaseline/Delta2.csv'
-    # figure_folder = 'C:/Data/Corpus/APIBaseline/figures2'
-    # final_file = 'C:/Data/Corpus/APIBaseline/HaertelAL18.csv'
-    # first_final_file = 'C:/Data/Corpus/APIBaseline/FirstFinal.csv'
-
+    # This can be changed to highlight top ranked by stars on the plot.
+    cut_rank = 600
 
     def save_figure(fig, name):
         fig.savefig(paths.evolution_folder + "/" + name + ".png")
@@ -95,8 +91,8 @@ if __name__ == '__main__':
     data = data.groupby(['api']).apply(lambda x: extend_api(x))
 
     # Now crazy rating function (Improve that tomorrow).
-    number_api = 93
-    number_clusters = 10000
+    number_api = len(data['api'].unique())
+    number_clusters = len(data.groupby(['api', 'version_usage_rank_in_cluster']))
     data['rating'] = data.apply(lambda x: (float(
         x.api_usage_rank * 1 + x.cluster_usage_rank_in_api * number_api + x.version_usage_rank_in_cluster * number_clusters)),
                                 axis=1)
@@ -104,7 +100,7 @@ if __name__ == '__main__':
     data['rank'] = range(0, len(data))
 
     # Save csv as final data.
-    data.to_csv(paths.haertelAL18, index= False)
+    data.to_csv(paths.haertelAL18, index=False)
 
     # Plot the data and add plotting specific columns that are not saved.
     for (id, api) in data.groupby(['api']):
@@ -125,7 +121,6 @@ if __name__ == '__main__':
         api['size_r'] = api.apply(lambda x: x['size'] / max_size, axis=1)
 
         # Marking to versions.
-        cut_rank = 300
         api['top_version_usage_r'] = api.apply(lambda x: x.version_usage_r if x['rank'] <= cut_rank else np.NaN, axis=1)
 
         # Start plotting magic.

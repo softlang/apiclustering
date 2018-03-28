@@ -33,36 +33,42 @@ class DecomposeClass(@Dependency access: RDDModule[(String, InputStreamDelegate)
         case (uri, content) =>
 
           val api = uri.split("#")(0)
-          val node: ClassNode = new ClassNode()
-          val cr: ClassReader = new ClassReader(content.delegate)
+          try {
 
-          cr.accept(node, 0)
+            val node: ClassNode = new ClassNode()
+            val cr: ClassReader = new ClassReader(content.delegate)
 
-          def isPublic(v: Int) = (v & Opcodes.ACC_PUBLIC) == Opcodes.ACC_PUBLIC
+            cr.accept(node, 0)
 
-          def isProtected(v: Int) = (v & Opcodes.ACC_PROTECTED) == Opcodes.ACC_PROTECTED
+            def isPublic(v: Int) = (v & Opcodes.ACC_PUBLIC) == Opcodes.ACC_PUBLIC
 
-          def isPrivate(v: Int) = (v & Opcodes.ACC_PRIVATE) == Opcodes.ACC_PRIVATE
+            def isProtected(v: Int) = (v & Opcodes.ACC_PROTECTED) == Opcodes.ACC_PROTECTED
 
-          val classname = node.name.replaceAll("/", ".")
-          val lastDotIndex = classname.lastIndexOf(".")
-          val simpleName = if (lastDotIndex == -1) classname else classname.substring(lastDotIndex + 1)
-          val publicClass = isPublic(node.access)
+            def isPrivate(v: Int) = (v & Opcodes.ACC_PRIVATE) == Opcodes.ACC_PRIVATE
+
+            val classname = node.name.replaceAll("/", ".")
+            val lastDotIndex = classname.lastIndexOf(".")
+            val simpleName = if (lastDotIndex == -1) classname else classname.substring(lastDotIndex + 1)
+            val publicClass = isPublic(node.access)
 
 
-          val publicMethods = node.methods.asScala.filter(x => isPublic(x.access)).map(_.name)
-          val protectedMethods = node.methods.asScala.filter(x => isProtected(x.access)).map(_.name)
-          val privateMethods = node.methods.asScala.filter(x => isPrivate(x.access)).map(_.name)
-          val allMethods = node.methods.asScala.map(_.name)
+            val publicMethods = node.methods.asScala.filter(x => isPublic(x.access)).map(_.name)
+            val protectedMethods = node.methods.asScala.filter(x => isProtected(x.access)).map(_.name)
+            val privateMethods = node.methods.asScala.filter(x => isPrivate(x.access)).map(_.name)
+            val allMethods = node.methods.asScala.map(_.name)
 
-          def prepare(content: Seq[String]) = if (content.isEmpty) Map() else Map(api + "#" + classname -> content.reduce(_ + " " + _))
+            def prepare(content: Seq[String]) = if (content.isEmpty) Map() else Map(api + "#" + classname -> content.reduce(_ + " " + _))
 
-          val result = _visibility match {
-            case "all" => prepare(Seq(simpleName) ++ allMethods)
-            case "visible" => prepare(if (publicClass) Seq(simpleName) ++ publicMethods ++ protectedMethods else Seq())
+            val result = _visibility match {
+              case "all" => prepare(Seq(simpleName) ++ allMethods)
+              case "visible" => prepare(if (publicClass) Seq(simpleName) ++ publicMethods ++ protectedMethods else Seq())
+            }
+
+            result
           }
-
-          result
+          catch {
+            case _: java.lang.IllegalArgumentException => Map()
+          }
       }
   }
 

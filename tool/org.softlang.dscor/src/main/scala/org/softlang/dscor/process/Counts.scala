@@ -74,7 +74,12 @@ object Counts {
 
     val dependencies = applicationGroups.flatMap { case (application, iterable) =>
       // Parse this and return normalized set of this applications dependencies.
-      val result = iterable.flatMap(x => parseNoExceptions(x.pomUrl)).toSet
+      val result = iterable.flatMap { x =>
+        val url = x.pomUrl
+          .replace("https://github.com/", "https://raw.githubusercontent.com/")
+          .replace(application + "/blob/", application + "/")
+        parseNoExceptions(url)
+      }.toSet
       val filteredResult = result.filter { case (groupId, artifactId, version) => (groupId != "undefined" & artifactId != "undefined" & version != "undefined") }
       // Accumulate result.
       dependencyAccumulator.add(filteredResult.size)
