@@ -25,8 +25,12 @@ object APIClustering {
     val length = FeatureModel.length[APIClustering].toInt
 
     val results = JUtils.asCSVSink(new File(Paths.results), Charsets.UTF_8, CSVSink.SinkType.DYNAMIC)
+    print("length: " + length)
+    for ((i, index) <- new scala.util.Random(1234567l).shuffle(0 to length).toSeq.zipWithIndex) {
 
-    for (i <- new scala.util.Random(1234567l).shuffle(0 to length)) {
+      println("configuration: " + i)
+      println("index: " + index)
+
       // Enumeration of the feature model.
       val target = FeatureModel.enumerate[APIClustering](i)
       val input = FeatureModel.flat(target)
@@ -58,8 +62,8 @@ object APIClustering {
           apis.flatMap(left => apis.map(right => (step, left, right, clustering.exists(c => c.contains(left) && c.contains(right)))))
         }
 
-//      val correlationProperties = (if (target.source.isInstanceOf[RoverLP13]) Set("domains")
-//      else Set("category", "tags", "api"))
+      //      val correlationProperties = (if (target.source.isInstanceOf[RoverLP13]) Set("domains")
+      //      else Set("category", "tags", "api"))
 
       val correlationProperties = Set("category", "tags", "api")
 
@@ -97,7 +101,7 @@ object APIClustering {
 
       val metadata = Map(
         "configuration_index" -> i.toString,
-        "linkage" ->  linkage.map(x => x._1 + ";" + x._2 + ";" + x._3 + ";" + x._4).reduceOption(_ + " " + _).getOrElse(""),
+        "linkage" -> linkage.map(x => x._1 + ";" + x._2 + ";" + x._3 + ";" + x._4).reduceOption(_ + " " + _).getOrElse(""),
         "apis" -> apis.sorted.reduce(_ + ";" + _)
       )
 
@@ -109,7 +113,7 @@ object APIClustering {
       // TODO: linkage matrix needs to be submitted. This can also be used to populate the web interface.
       println(output)
       results.write(result.asJava)
-      results.flush();
+      results.flush()
     }
   }
 }

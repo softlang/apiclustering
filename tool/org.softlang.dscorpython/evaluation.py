@@ -104,12 +104,13 @@ if __name__ == '__main__':
 
         ci = 100
         marker = 'o'
-        sns.tsplot(data=raw[(raw.sampling != 'API') & (raw['property'] == 'domains')], legend=True, ax=ax0,
-                   time='step',
-                   ci=ci,
-                   color=palette,
-                   unit='configuration_index', condition=feature,
-                   value='correlation', )
+        if False:
+            sns.tsplot(data=raw[(raw.sampling != 'API') & (raw['property'] == 'domains')], legend=True, ax=ax0,
+                       time='step',
+                       ci=ci,
+                       color=palette,
+                       unit='configuration_index', condition=feature,
+                       value='correlation', )
 
         sns.tsplot(data=raw[(raw.sampling != 'API') & (raw['property'] == 'tags')], ax=ax1, legend=False,
                    time='step',
@@ -196,7 +197,8 @@ if __name__ == '__main__':
 
         fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2, sharey=True)
 
-        sns.boxplot(ax=ax0, x=feature, y="domains_max_correlation", data=configurations, palette=palette)
+        if False:
+            sns.boxplot(ax=ax0, x=feature, y="domains_max_correlation", data=configurations, palette=palette)
         sns.boxplot(ax=ax1, x=feature, y="tags_max_correlation", data=configurations, palette=palette)
         sns.boxplot(ax=ax2, x=feature, y="category_max_correlation", data=configurations, palette=palette)
         sns.boxplot(ax=ax3, x=feature, y="api_max_correlation", data=configurations, palette=palette)
@@ -231,7 +233,8 @@ if __name__ == '__main__':
 
                 fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2, sharey=True)
 
-                sns.boxplot(ax=ax0, x=feature_a, hue=feature_b, y="domains_max_correlation", data=configurations,
+                if False:
+                    sns.boxplot(ax=ax0, x=feature_a, hue=feature_b, y="domains_max_correlation", data=configurations,
                             palette=palette)
                 sns.boxplot(ax=ax1, x=feature_a, hue=feature_b, y="tags_max_correlation", data=configurations,
                             palette=palette)
