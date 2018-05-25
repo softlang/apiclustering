@@ -1,0 +1,66 @@
+{
+  "threshold":0.03,
+  "children": [
+    {
+      "threshold":0.04,
+      "children": [
+        {
+          "children": [],
+          "name": "f",
+          "threshold":0.25
+        },
+        {
+          "threshold":0.3,
+          "children": [
+            {
+              "threshold":0.4,
+              "children": [],
+              "name": "b"
+            },
+            {
+              "threshold":0.4,
+              "children": [
+                {
+                  "children": [
+                    {
+                      "threshold":0.5,
+                      "children": [],
+                      "name": "c"
+                    },
+                    {
+                      "threshold":0.6,
+                      "children": [],
+                      "name": "d"
+                    }
+                  ],
+                  "threshold":0.4,
+                  "name": "c-d"
+                },
+                {
+                  "threshold":0.55,
+                  "children": [
+                    {
+                      "threshold":0.6,
+                      "children": [],
+                      "name": "a"
+                    },
+                    {
+                      "threshold":0.6,
+                      "children": [],
+                      "name": "e"
+                    }
+                  ],
+                  "name": "a-e"
+                }
+              ],
+              "name": "a-c-d-e"
+            }
+          ],
+          "name": "a-b-c-d-e"
+        }
+      ],
+      "name": "a-b-c-d-e-f"
+    }
+  ],
+  "name": "Root1"
+}

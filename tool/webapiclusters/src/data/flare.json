@@ -1,0 +1,950 @@
+{
+  "left": "117",
+  "right": "115",
+  "threshold": "1.0",
+  "size": "1.0",
+  "name": "",
+  "type": "node",
+  "children": [
+    {
+      "left": "116",
+      "right": "54",
+      "threshold": "0.9277344603587301",
+      "size": "0.9277344603587301",
+      "name": "",
+      "type": "node",
+      "children": [
+        {
+          "left": "114",
+          "right": "55",
+          "threshold": "0.8754572253358984",
+          "size": "0.8754572253358984",
+          "name": "",
+          "type": "node",
+          "children": [
+            {
+              "left": "113",
+              "right": "112",
+              "threshold": "0.8107823375997115",
+              "size": "0.8107823375997115",
+              "name": "",
+              "type": "node",
+              "children": [
+                {
+                  "left": "111",
+                  "right": "50",
+                  "threshold": "0.7140664608844969",
+                  "size": "0.7140664608844969",
+                  "name": "",
+                  "type": "node",
+                  "children": [
+                    {
+                      "left": "110",
+                      "right": "1",
+                      "threshold": "0.6251176505859951",
+                      "size": "0.6251176505859951",
+                      "name": "",
+                      "type": "node",
+                      "children": [
+                        {
+                          "left": "109",
+                          "right": "42",
+                          "threshold": "0.5206186140996225",
+                          "size": "0.5206186140996225",
+                          "name": "",
+                          "type": "node",
+                          "children": [
+                            {
+                              "left": "108",
+                              "right": "18",
+                              "threshold": "0.4609438686367652",
+                              "size": "0.4609438686367652",
+                              "name": "",
+                              "type": "node",
+                              "children": [
+                                {
+                                  "left": "107",
+                                  "right": "56",
+                                  "threshold": "0.4475274066579117",
+                                  "size": "0.4475274066579117",
+                                  "name": "",
+                                  "type": "node",
+                                  "children": [
+                                    {
+                                      "left": "106",
+                                      "right": "10",
+                                      "threshold": "0.42146075092442825",
+                                      "size": "0.42146075092442825",
+                                      "name": "",
+                                      "type": "node",
+                                      "children": [
+                                        {
+                                          "left": "105",
+                                          "right": "11",
+                                          "threshold": "0.3872623601969567",
+                                          "size": "0.3872623601969567",
+                                          "name": "",
+                                          "type": "node",
+                                          "children": [
+                                            {
+                                              "left": "104",
+                                              "right": "59",
+                                              "threshold": "0.3534835595685828",
+                                              "size": "0.3534835595685828",
+                                              "name": "",
+                                              "type": "node",
+                                              "children": [
+                                                {
+                                                  "left": "103",
+                                                  "right": "22",
+                                                  "threshold": "0.3332807816954382",
+                                                  "size": "0.3332807816954382",
+                                                  "name": "",
+                                                  "type": "node",
+                                                  "children": [
+                                                    {
+                                                      "left": "102",
+                                                      "right": "47",
+                                                      "threshold": "0.3273230800793332",
+                                                      "size": "0.3273230800793332",
+                                                      "name": "",
+                                                      "type": "node",
+                                                      "children": [
+                                                        {
+                                                          "left": "101",
+                                                          "right": "83",
+                                                          "threshold": "0.3241831203439688",
+                                                          "size": "0.3241831203439688",
+                                                          "name": "",
+                                                          "type": "node",
+                                                          "children": [
+                                                            {
+                                                              "left": "100",
+                                                              "right": "5",
+                                                              "threshold": "0.29324166421709263",
+                                                              "size": "0.29324166421709263",
+                                                              "name": "",
+                                                              "type": "node",
+                                                              "children": [
+                                                                {
+                                                                  "left": "99",
+                                                                  "right": "8",
+                                                                  "threshold": "0.2652154821768111",
+                                                                  "size": "0.2652154821768111",
+                                                                  "name": "",
+                                                                  "type": "node",
+                                                                  "children": [
+                                                                    {
+                                                                      "left": "98",
+                                                                      "right": "35",
+                                                                      "threshold": "0.2482246056341596",
+                                                                      "size": "0.2482246056341596",
+                                                                      "name": "",
+                                                                      "type": "node",
+                                                                      "children": [
+                                                                        {
+                                                                          "left": "97",
+                                                                          "right": "14",
+                                                                          "threshold": "0.22642976120538094",
+                                                                          "size": "0.22642976120538094",
+                                                                          "name": "",
+                                                                          "type": "node",
+                                                                          "children": [
+                                                                            {
+                                                                              "left": "96",
+                                                                              "right": "31",
+                                                                              "threshold": "0.21415840310090983",
+                                                                              "size": "0.21415840310090983",
+                                                                              "name": "",
+                                                                              "type": "node",
+                                                                              "children": [
+                                                                                {
+                                                                                  "left": "95",
+                                                                                  "right": "93",
+                                                                                  "threshold": "0.1871645389433393",
+                                                                                  "size": "0.1871645389433393",
+                                                                                  "name": "",
+                                                                                  "type": "node",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "left": "92",
+                                                                                      "right": "17",
+                                                                                      "threshold": "0.1826296031864455",
+                                                                                      "size": "0.1826296031864455",
+                                                                                      "name": "",
+                                                                                      "type": "node",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "left": "91",
+                                                                                          "right": "90",
+                                                                                          "threshold": "0.1699523839828565",
+                                                                                          "size": "0.1699523839828565",
+                                                                                          "name": "",
+                                                                                          "type": "node",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "left": "86",
+                                                                                              "right": "15",
+                                                                                              "threshold": "0.15775004363437473",
+                                                                                              "size": "0.15775004363437473",
+                                                                                              "name": "",
+                                                                                              "type": "node",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "left": "21",
+                                                                                                  "right": "19",
+                                                                                                  "threshold": "0.14416471272345044",
+                                                                                                  "size": "0.14416471272345044",
+                                                                                                  "name": "",
+                                                                                                  "type": "node",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "threshold": "0",
+                                                                                                      "size": "1",
+                                                                                                      "name": "JFreeChart",
+                                                                                                      "type": "leaf"
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "threshold": "0",
+                                                                                                      "size": "1",
+                                                                                                      "name": "JDOM",
+                                                                                                      "type": "leaf"
+                                                                                                    }
+                                                                                                  ]
+                                                                                                },
+                                                                                                {
+                                                                                                  "threshold": "0",
+                                                                                                  "size": "1",
+                                                                                                  "name": "Hamcrest",
+                                                                                                  "type": "leaf"
+                                                                                                }
+                                                                                              ]
+                                                                                            },
+                                                                                            {
+                                                                                              "left": "89",
+                                                                                              "right": "87",
+                                                                                              "threshold": "0.15703429225364085",
+                                                                                              "size": "0.15703429225364085",
+                                                                                              "name": "",
+                                                                                              "type": "node",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "left": "85",
+                                                                                                  "right": "39",
+                                                                                                  "threshold": "0.14841473325165955",
+                                                                                                  "size": "0.14841473325165955",
+                                                                                                  "name": "",
+                                                                                                  "type": "node",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "left": "84",
+                                                                                                      "right": "36",
+                                                                                                      "threshold": "0.1380032807295637",
+                                                                                                      "size": "0.1380032807295637",
+                                                                                                      "name": "",
+                                                                                                      "type": "node",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "left": "82",
+                                                                                                          "right": "0",
+                                                                                                          "threshold": "0.1322390540762164",
+                                                                                                          "size": "0.1322390540762164",
+                                                                                                          "name": "",
+                                                                                                          "type": "node",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "left": "81",
+                                                                                                              "right": "80",
+                                                                                                              "threshold": "0.11748138293019006",
+                                                                                                              "size": "0.11748138293019006",
+                                                                                                              "name": "",
+                                                                                                              "type": "node",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "left": "75",
+                                                                                                                  "right": "32",
+                                                                                                                  "threshold": "0.11302375426338485",
+                                                                                                                  "size": "0.11302375426338485",
+                                                                                                                  "name": "",
+                                                                                                                  "type": "node",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "left": "73",
+                                                                                                                      "right": "41",
+                                                                                                                      "threshold": "0.09811762096324994",
+                                                                                                                      "size": "0.09811762096324994",
+                                                                                                                      "name": "",
+                                                                                                                      "type": "node",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "left": "33",
+                                                                                                                          "right": "20",
+                                                                                                                          "threshold": "0.08646886095067063",
+                                                                                                                          "size": "0.08646886095067063",
+                                                                                                                          "name": "",
+                                                                                                                          "type": "node",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "threshold": "0",
+                                                                                                                              "size": "1",
+                                                                                                                              "name": "Jython",
+                                                                                                                              "type": "leaf"
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                              "threshold": "0",
+                                                                                                                              "size": "1",
+                                                                                                                              "name": "JDT",
+                                                                                                                              "type": "leaf"
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "threshold": "0",
+                                                                                                                          "size": "1",
+                                                                                                                          "name": "Rhino",
+                                                                                                                          "type": "leaf"
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "threshold": "0",
+                                                                                                                      "size": "1",
+                                                                                                                      "name": "Jetty",
+                                                                                                                      "type": "leaf"
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                  "left": "79",
+                                                                                                                  "right": "38",
+                                                                                                                  "threshold": "0.11214302021280975",
+                                                                                                                  "size": "0.11214302021280975",
+                                                                                                                  "name": "",
+                                                                                                                  "type": "node",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "left": "78",
+                                                                                                                      "right": "49",
+                                                                                                                      "threshold": "0.10962235601689996",
+                                                                                                                      "size": "0.10962235601689996",
+                                                                                                                      "name": "",
+                                                                                                                      "type": "node",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "left": "76",
+                                                                                                                          "right": "51",
+                                                                                                                          "threshold": "0.10492446344546835",
+                                                                                                                          "size": "0.10492446344546835",
+                                                                                                                          "name": "",
+                                                                                                                          "type": "node",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "left": "74",
+                                                                                                                              "right": "72",
+                                                                                                                              "threshold": "0.09862043460634484",
+                                                                                                                              "size": "0.09862043460634484",
+                                                                                                                              "name": "",
+                                                                                                                              "type": "node",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "left": "29",
+                                                                                                                                  "right": "23",
+                                                                                                                                  "threshold": "0.08716391789901445",
+                                                                                                                                  "size": "0.08716391789901445",
+                                                                                                                                  "name": "",
+                                                                                                                                  "type": "node",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "threshold": "0",
+                                                                                                                                      "size": "1",
+                                                                                                                                      "name": "JUnit",
+                                                                                                                                      "type": "leaf"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "threshold": "0",
+                                                                                                                                      "size": "1",
+                                                                                                                                      "name": "JGraph",
+                                                                                                                                      "type": "leaf"
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "left": "71",
+                                                                                                                                  "right": "69",
+                                                                                                                                  "threshold": "0.08393509392132836",
+                                                                                                                                  "size": "0.08393509392132836",
+                                                                                                                                  "name": "",
+                                                                                                                                  "type": "node",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "left": "66",
+                                                                                                                                      "right": "3",
+                                                                                                                                      "threshold": "0.08305319588214533",
+                                                                                                                                      "size": "0.08305319588214533",
+                                                                                                                                      "name": "",
+                                                                                                                                      "type": "node",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "left": "61",
+                                                                                                                                          "right": "48",
+                                                                                                                                          "threshold": "0.05973770279052615",
+                                                                                                                                          "size": "0.05973770279052615",
+                                                                                                                                          "name": "",
+                                                                                                                                          "type": "node",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "left": "46",
+                                                                                                                                              "right": "2",
+                                                                                                                                              "threshold": "0.041309043959475655",
+                                                                                                                                              "size": "0.041309043959475655",
+                                                                                                                                              "name": "",
+                                                                                                                                              "type": "node",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "threshold": "0",
+                                                                                                                                                  "size": "1",
+                                                                                                                                                  "name": "Struts",
+                                                                                                                                                  "type": "leaf"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                  "threshold": "0",
+                                                                                                                                                  "size": "1",
+                                                                                                                                                  "name": "Ant",
+                                                                                                                                                  "type": "leaf"
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                              "threshold": "0",
+                                                                                                                                              "size": "1",
+                                                                                                                                              "name": "Velocity",
+                                                                                                                                              "type": "leaf"
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                          "threshold": "0",
+                                                                                                                                          "size": "1",
+                                                                                                                                          "name": "ApacheXML",
+                                                                                                                                          "type": "leaf"
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "left": "68",
+                                                                                                                                      "right": "67",
+                                                                                                                                      "threshold": "0.07699144958949034",
+                                                                                                                                      "size": "0.07699144958949034",
+                                                                                                                                      "name": "",
+                                                                                                                                      "type": "node",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "left": "65",
+                                                                                                                                          "right": "40",
+                                                                                                                                          "threshold": "0.07017386947479898",
+                                                                                                                                          "size": "0.07017386947479898",
+                                                                                                                                          "name": "",
+                                                                                                                                          "type": "node",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "left": "25",
+                                                                                                                                              "right": "9",
+                                                                                                                                              "threshold": "0.057942750981254676",
+                                                                                                                                              "size": "0.057942750981254676",
+                                                                                                                                              "name": "",
+                                                                                                                                              "type": "node",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "threshold": "0",
+                                                                                                                                                  "size": "1",
+                                                                                                                                                  "name": "JMF",
+                                                                                                                                                  "type": "leaf"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                  "threshold": "0",
+                                                                                                                                                  "size": "1",
+                                                                                                                                                  "name": "BouncyCastle",
+                                                                                                                                                  "type": "leaf"
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                              "threshold": "0",
+                                                                                                                                              "size": "1",
+                                                                                                                                              "name": "PlexusXML",
+                                                                                                                                              "type": "leaf"
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                          "left": "64",
+                                                                                                                                          "right": "45",
+                                                                                                                                          "threshold": "0.062325086681246034",
+                                                                                                                                          "size": "0.062325086681246034",
+                                                                                                                                          "name": "",
+                                                                                                                                          "type": "node",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "left": "63",
+                                                                                                                                              "right": "62",
+                                                                                                                                              "threshold": "0.0522741777910114",
+                                                                                                                                              "size": "0.0522741777910114",
+                                                                                                                                              "name": "",
+                                                                                                                                              "type": "node",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "left": "34",
+                                                                                                                                                  "right": "30",
+                                                                                                                                                  "threshold": "0.049162548003032325",
+                                                                                                                                                  "size": "0.049162548003032325",
+                                                                                                                                                  "name": "",
+                                                                                                                                                  "type": "node",
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "threshold": "0",
+                                                                                                                                                      "size": "1",
+                                                                                                                                                      "name": "Lucene",
+                                                                                                                                                      "type": "leaf"
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                      "threshold": "0",
+                                                                                                                                                      "size": "1",
+                                                                                                                                                      "name": "JavaMail",
+                                                                                                                                                      "type": "leaf"
+                                                                                                                                                    }
+                                                                                                                                                  ]
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                  "left": "60",
+                                                                                                                                                  "right": "16",
+                                                                                                                                                  "threshold": "0.04413631381820737",
+                                                                                                                                                  "size": "0.04413631381820737",
+                                                                                                                                                  "name": "",
+                                                                                                                                                  "type": "node",
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "left": "52",
+                                                                                                                                                      "right": "26",
+                                                                                                                                                      "threshold": "0.03970341058050586",
+                                                                                                                                                      "size": "0.03970341058050586",
+                                                                                                                                                      "name": "",
+                                                                                                                                                      "type": "node",
+                                                                                                                                                      "children": [
+                                                                                                                                                        {
+                                                                                                                                                          "threshold": "0",
+                                                                                                                                                          "size": "1",
+                                                                                                                                                          "name": "iText",
+                                                                                                                                                          "type": "leaf"
+                                                                                                                                                        },
+                                                                                                                                                        {
+                                                                                                                                                          "threshold": "0",
+                                                                                                                                                          "size": "1",
+                                                                                                                                                          "name": "JNDI",
+                                                                                                                                                          "type": "leaf"
+                                                                                                                                                        }
+                                                                                                                                                      ]
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                      "threshold": "0",
+                                                                                                                                                      "size": "1",
+                                                                                                                                                      "name": "Hibernate",
+                                                                                                                                                      "type": "leaf"
+                                                                                                                                                    }
+                                                                                                                                                  ]
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                              "threshold": "0",
+                                                                                                                                              "size": "1",
+                                                                                                                                              "name": "Spring",
+                                                                                                                                              "type": "leaf"
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                              "threshold": "0",
+                                                                                                                              "size": "1",
+                                                                                                                              "name": "dom4j",
+                                                                                                                              "type": "leaf"
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "threshold": "0",
+                                                                                                                          "size": "1",
+                                                                                                                          "name": "XStream",
+                                                                                                                          "type": "leaf"
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "threshold": "0",
+                                                                                                                      "size": "1",
+                                                                                                                      "name": "OSCache",
+                                                                                                                      "type": "leaf"
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "threshold": "0",
+                                                                                                              "size": "1",
+                                                                                                              "name": "ANTLR",
+                                                                                                              "type": "leaf"
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "threshold": "0",
+                                                                                                          "size": "1",
+                                                                                                          "name": "OGNL",
+                                                                                                          "type": "leaf"
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "threshold": "0",
+                                                                                                      "size": "1",
+                                                                                                      "name": "POI",
+                                                                                                      "type": "leaf"
+                                                                                                    }
+                                                                                                  ]
+                                                                                                },
+                                                                                                {
+                                                                                                  "left": "58",
+                                                                                                  "right": "24",
+                                                                                                  "threshold": "0.14591728219344302",
+                                                                                                  "size": "0.14591728219344302",
+                                                                                                  "name": "",
+                                                                                                  "type": "node",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "threshold": "0",
+                                                                                                      "size": "1",
+                                                                                                      "name": "org.htmlparser",
+                                                                                                      "type": "leaf"
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "threshold": "0",
+                                                                                                      "size": "1",
+                                                                                                      "name": "JGroups",
+                                                                                                      "type": "leaf"
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        },
+                                                                                        {
+                                                                                          "threshold": "0",
+                                                                                          "size": "1",
+                                                                                          "name": "JAF",
+                                                                                          "type": "leaf"
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "left": "88",
+                                                                                      "right": "37",
+                                                                                      "threshold": "0.17179357062538714",
+                                                                                      "size": "0.17179357062538714",
+                                                                                      "name": "",
+                                                                                      "type": "node",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "left": "77",
+                                                                                          "right": "28",
+                                                                                          "threshold": "0.14687444713958697",
+                                                                                          "size": "0.14687444713958697",
+                                                                                          "name": "",
+                                                                                          "type": "node",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "left": "70",
+                                                                                              "right": "4",
+                                                                                              "threshold": "0.10343077143515622",
+                                                                                              "size": "0.10343077143515622",
+                                                                                              "name": "",
+                                                                                              "type": "node",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "left": "57",
+                                                                                                  "right": "6",
+                                                                                                  "threshold": "0.08193386052975515",
+                                                                                                  "size": "0.08193386052975515",
+                                                                                                  "name": "",
+                                                                                                  "type": "node",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "threshold": "0",
+                                                                                                      "size": "1",
+                                                                                                      "name": "log4j",
+                                                                                                      "type": "leaf"
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "threshold": "0",
+                                                                                                      "size": "1",
+                                                                                                      "name": "AvalonLogKit",
+                                                                                                      "type": "leaf"
+                                                                                                    }
+                                                                                                  ]
+                                                                                                },
+                                                                                                {
+                                                                                                  "threshold": "0",
+                                                                                                  "size": "1",
+                                                                                                  "name": "ApacheXML-RPC",
+                                                                                                  "type": "leaf"
+                                                                                                }
+                                                                                              ]
+                                                                                            },
+                                                                                            {
+                                                                                              "threshold": "0",
+                                                                                              "size": "1",
+                                                                                              "name": "JTA",
+                                                                                              "type": "leaf"
+                                                                                            }
+                                                                                          ]
+                                                                                        },
+                                                                                        {
+                                                                                          "threshold": "0",
+                                                                                          "size": "1",
+                                                                                          "name": "ORO",
+                                                                                          "type": "leaf"
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "threshold": "0",
+                                                                                  "size": "1",
+                                                                                  "name": "Jaxen",
+                                                                                  "type": "leaf"
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "threshold": "0",
+                                                                              "size": "1",
+                                                                              "name": "Guice",
+                                                                              "type": "leaf"
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "threshold": "0",
+                                                                          "size": "1",
+                                                                          "name": "Maven",
+                                                                          "type": "leaf"
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "threshold": "0",
+                                                                      "size": "1",
+                                                                      "name": "BSF",
+                                                                      "type": "leaf"
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "threshold": "0",
+                                                                  "size": "1",
+                                                                  "name": "Avalon",
+                                                                  "type": "leaf"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "left": "44",
+                                                              "right": "7",
+                                                              "threshold": "0.12946446568574033",
+                                                              "size": "0.12946446568574033",
+                                                              "name": "",
+                                                              "type": "node",
+                                                              "children": [
+                                                                {
+                                                                  "threshold": "0",
+                                                                  "size": "1",
+                                                                  "name": "Smack",
+                                                                  "type": "leaf"
+                                                                },
+                                                                {
+                                                                  "threshold": "0",
+                                                                  "size": "1",
+                                                                  "name": "BCEL",
+                                                                  "type": "leaf"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "threshold": "0",
+                                                          "size": "1",
+                                                          "name": "Tidy",
+                                                          "type": "leaf"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "threshold": "0",
+                                                      "size": "1",
+                                                      "name": "JGoodies",
+                                                      "type": "leaf"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "threshold": "0",
+                                                  "size": "1",
+                                                  "name": "org.syntax.jedit",
+                                                  "type": "leaf"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "threshold": "0",
+                                              "size": "1",
+                                              "name": "ECS",
+                                              "type": "leaf"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "threshold": "0",
+                                          "size": "1",
+                                          "name": "CUP",
+                                          "type": "leaf"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "threshold": "0",
+                                      "size": "1",
+                                      "name": "javax.servlet",
+                                      "type": "leaf"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "threshold": "0",
+                                  "size": "1",
+                                  "name": "JAMA",
+                                  "type": "leaf"
+                                }
+                              ]
+                            },
+                            {
+                              "threshold": "0",
+                              "size": "1",
+                              "name": "SAX",
+                              "type": "leaf"
+                            }
+                          ]
+                        },
+                        {
+                          "threshold": "0",
+                          "size": "1",
+                          "name": "ASM",
+                          "type": "leaf"
+                        }
+                      ]
+                    },
+                    {
+                      "threshold": "0",
+                      "size": "1",
+                      "name": "com.apple.eawt",
+                      "type": "leaf"
+                    }
+                  ]
+                },
+                {
+                  "left": "43",
+                  "right": "13",
+                  "threshold": "0.6306176700077013",
+                  "size": "0.6306176700077013",
+                  "name": "",
+                  "type": "node",
+                  "children": [
+                    {
+                      "threshold": "0",
+                      "size": "1",
+                      "name": "SLF4J",
+                      "type": "leaf"
+                    },
+                    {
+                      "threshold": "0",
+                      "size": "1",
+                      "name": "Guava",
+                      "type": "leaf"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "threshold": "0",
+              "size": "1",
+              "name": "javax.net",
+              "type": "leaf"
+            }
+          ]
+        },
+        {
+          "threshold": "0",
+          "size": "1",
+          "name": "javax.jnlp",
+          "type": "leaf"
+        }
+      ]
+    },
+    {
+      "left": "94",
+      "right": "53",
+      "threshold": "0.8440439440501452",
+      "size": "0.8440439440501452",
+      "name": "",
+      "type": "node",
+      "children": [
+        {
+          "left": "27",
+          "right": "12",
+          "threshold": "0.17693676209591636",
+          "size": "0.17693676209591636",
+          "name": "",
+          "type": "node",
+          "children": [
+            {
+              "threshold": "0",
+              "size": "1",
+              "name": "JPA",
+              "type": "leaf"
+            },
+            {
+              "threshold": "0",
+              "size": "1",
+              "name": "EJB",
+              "type": "leaf"
+            }
+          ]
+        },
+        {
+          "threshold": "0",
+          "size": "1",
+          "name": "javax.annotation",
+          "type": "leaf"
+        }
+      ]
+    }
+  ]
+}
